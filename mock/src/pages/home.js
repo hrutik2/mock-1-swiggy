@@ -33,18 +33,18 @@ export const Home = () => {
             <Text fontSize='30px'>Set up your quiz</Text>
             <Container w="30%" p="10px" m="auto">
                 <Input placeholder='Enter your Name' w="90%" p="6px" marginBottom="20px" onChange={(e) => setName(e.target.value)} />
-                <Select placeholder='Select Category' w="94%" p="6px" margin="auto" marginBottom="20px" value={category} name='category' onChange={handleChange}>
-                    <option value="">Select Category</option>
+                <select style={{width:"94%", padding:"6px",margin:"auto", marginBottom:"20px"}} value={category} name='category' onChange={handleChange}>
+                <option value="">Select Category</option>
                     <option value="General Knowledge">General Knowledge</option>
                     <option value="Sports">Sports</option>
                     <option value="Geography">Geography</option>
-                </Select>
-                <Select placeholder='Select Difficulty' w="94%" p="6px" margin="auto" marginBottom="20px" value={difficulty} name='difficulty' onChange={handleChange}>
-                    <option value="">Select Difficulty</option>
+                </select>
+                <select style={{width:"94%", padding:"6px",margin:"auto", marginBottom:"20px"}} value={difficulty} name='difficulty' onChange={handleChange}>
+                <option value="">Select difficulty</option>
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
-                </Select>
+                </select>
                 <Input placeholder='Choose Number of Questions' w="90%" p="6px" marginBottom="20px" value={amount} name='amount' onChange={handleChange} />
                 <br />
                 <Button w="94%" p="6px" onClick={handleSubmit}>START QUIZ</Button>
